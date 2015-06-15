@@ -1,0 +1,21 @@
+{
+  "name": "backbone-boilerplate",
+  "version": "0.0.1",
+  "homepage": "https://github.com/dosandk/backbone-boilerplate",
+  "authors": [
+    "Vladimir Shevchuk <dosandkv@gmail.com>"
+  ],
+  "description": "backbone-boilerplate",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "backbone": "~1.2.1",
+    "jquery": "~2.1.4"
+  }
+}

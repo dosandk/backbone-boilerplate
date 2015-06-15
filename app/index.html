@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Backbone app</title>
+    <script src="js/lib/jquery.js"></script>
+    <script src="js/lib/underscore.js"></script>
+    <script src="js/lib/backbone.js"></script>
+
+    <script src="js/views.js"></script>
+    <script src="js/router.js"></script>
+</head>
+<body>
+
+    <script>
+        var app;
+        $(document).ready(function(){
+            app = new router;
+            Backbone.history.start();
+        })
+    </script>
+
+</body>
+</html>
