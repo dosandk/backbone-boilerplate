@@ -16,7 +16,8 @@ var router = Backbone.Router.extend({
     loadApple: function(appleName) {
         var self = this;
 
-        self.appleView.render(appleName);
+        //self.appleView.render(appleName);
+        self.appleView.loadApple(appleName);
     },
     home: function() {
         var self = this;
