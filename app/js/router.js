@@ -1,13 +1,28 @@
 var router = Backbone.Router.extend({
     routes: {
-        '': 'home'
+        '': 'home',
+        'apples/:appleName': 'loadApple'
     },
-    home: function(){
+    initialize: function() {
+        var self = this;
+        console.error('router was initialized');
+
+        var apples = new Apples();
+        apples.reset(appleData);
+
+        self.homeView = new homeView({collection: apples});
+        self.appleView = new appleView({collection: apples});
+    },
+    loadApple: function(appleName) {
+        var self = this;
+
+        self.appleView.render(appleName);
+    },
+    home: function() {
         var self = this;
 
         console.error('router home');
 
-        self.homeView = new homeView;
         self.homeView.render();
     }
 });
