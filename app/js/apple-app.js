@@ -12,6 +12,7 @@ var router = Backbone.Router.extend({
 
         self.homeView = new homeView({collection: apples});
         self.appleView = new appleView({collection: apples});
+        self.newHomeView = new newHomeView();
     },
     loadApple: function(appleName) {
         var self = this;
@@ -26,4 +27,11 @@ var router = Backbone.Router.extend({
 
         self.homeView.render();
     }
+});
+
+var app;
+
+$(document).ready(function(){
+    app = new router;
+    Backbone.history.start();
 });

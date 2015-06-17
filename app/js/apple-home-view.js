@@ -30,5 +30,24 @@ var homeView = Backbone.View.extend({
         console.log(arguments);
 
         $(self.cartEl).append(appleModel.get('name') + '<br/>');
+    },
+    test: function(massage) {
+        var self = this;
+
+        console.error(massage);
+    }
+});
+
+var newHomeView = homeView.extend({
+
+    initialize: function() {
+        var self = this;
+
+        self.render();
+    },
+    render: function() {
+        var self = this;
+
+        self.test('newHomeView is child of homeView');
     }
 });

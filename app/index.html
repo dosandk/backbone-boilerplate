@@ -8,6 +8,8 @@
 
     <script src="js/app.js"></script>
 
+    <script src="js/data/apple-data.js"></script>
+
     <script src="templates/apple-item.tpl.js"></script>
     <script src="templates/apple-home.tpl.js"></script>
     <script src="templates/apple-spinner.tpl.js"></script>
@@ -20,27 +22,6 @@
     <script src="js/apple-app.js"></script>
 </head>
 <body>
-
-    <script>
-        var appleData = [
-            {
-                name: "fuji",
-                url: "img/fuji.jpg"
-            },
-            {
-                name: "gala",
-                url: "img/gala.jpg"
-            }
-        ];
-    </script>
-
-    <script>
-        var app;
-        $(document).ready(function(){
-            app = new router;
-            Backbone.history.start();
-        })
-    </script>
 
 </body>
 </html>
