@@ -1,3 +1,3 @@
-;(function() {
-   App.templates.appleTpl = '<figure><img src="<%= attributes.url %>"/><figcaption><%= attributes.name %></figcaption></figure>';
-}());
+define(function() {
+	return '<figure><img src="<%= attributes.url %>"/><figcaption><%= attributes.name %></figcaption></figure>';
+});
