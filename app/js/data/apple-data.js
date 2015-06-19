@@ -9,7 +9,7 @@ var appleData = [
     },
     {
         name: "melba",
-        url: "img/gala.jpg"
+        url: "img/melba.jpg"
     },
     {
         name: "mantet",
