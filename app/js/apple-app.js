@@ -1,13 +1,13 @@
 require(
     [
-        'apple-item.tpl', //можно исопльзовать shim-плагин
-        'apple-home.tpl',
-        'apple-spinner.tpl',
-        'apple.tpl',
-        'apple-item.view',
-        'apple-home.view',
-        'apple.view',
-        'apples'
+        'templates/apple-item.tpl', //можно исопльзовать shim-плагин
+        'templates/apple-home.tpl',
+        'templates/apple-spinner.tpl',
+        'templates/apple.tpl',
+        'js/apple-item-view',
+        'js/apple-home-view',
+        'js/apple-view',
+        'js/apples'
     ],
     function(appleItemTpl, appleHomeTpl, appleSpinnerTpl, appleTpl, appelItemView, homeView, appleView, Apples) {
         var appleData = [
@@ -30,7 +30,7 @@ require(
         ];
 
         var app;
-        var router = Backbone.Router.extend({
+        var router = Backbone.Router.extend({ //check if need to be required
             routes: {
                 '': 'home',
                 'apples/:appleName': 'loadApple'
@@ -44,7 +44,6 @@ require(
 
                 self.homeView = new homeView({collection: apples});
                 self.appleView = new appleView({collection: apples});
-                self.newHomeView = new newHomeView();
             },
             loadApple: function(appleName) {
                 var self = this;
