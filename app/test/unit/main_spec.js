@@ -1,3 +1,5 @@
+'use strict';
+
 describe("Our First Test", function() {
     it('should pass', function() {
         expect(true).toBe(true);
@@ -20,6 +22,26 @@ describe('Backbone', function() {
     it('should be loaded', function() {
         expect(Backbone).toBeDefined();
     })
+});
+
+describe('App', function() {
+    beforeEach(function() {
+        this.app = new router;
+    });
+
+    describe("views should be initialized", function () {
+        it('appleView should be initialized', function() {
+            expect(this.app.appleView).toBeDefined();
+        });
+
+        it('homeView should be initialized', function() {
+            expect(this.app.homeView).toBeDefined();
+        });
+
+        it('newHomeView should be initialized', function() {
+            expect(this.app.newHomeView).toBeDefined();
+        });
+    });
 });
 
 it("should expose an attribute", function() {
