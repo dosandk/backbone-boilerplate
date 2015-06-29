@@ -1,3 +1,7 @@
+requirejs.config({
+    urlArgs: "bust=" + (new Date()).getTime()
+});
+
 require(
     [
         'templates/apple-item.tpl', //можно исопльзовать shim-плагин
