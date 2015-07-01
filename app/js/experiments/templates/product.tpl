@@ -1,0 +1,1 @@
+<li>name: <%= name %> | calculated discount: <%= discountValue %></li>

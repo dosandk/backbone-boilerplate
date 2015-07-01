@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Title</title>
+    <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+</head>
+<body>
+
+    <ul id="products-view-port">&nbsp;</ul>
+
+    <script src="app.js"></script>
+    <script src="models/product-model.js"></script>
+    <script src="views/product-view.js"></script>
+    <script src="collections/product-collection.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            App.collections.products = new App.ProductCollection();
+            App.collections.products.add(arrData);
+        });
+    </script>
+</body>
+</html>
