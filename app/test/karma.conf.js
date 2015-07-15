@@ -5,37 +5,25 @@ module.exports = function (config) {
     config.set({
 
         // base path that will be used to resolve all patterns (eg. files, exclude)
-        basePath: '../',
+        basePath: './',
 
         // frameworks to use
         // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-        frameworks: ['jasmine'],
+        frameworks: ['jasmine', 'requirejs'],
 
         // list of files / patterns to load in the browser
         files: [
-            //'*.spoke.js',
-            //'app/spec/*.js'
-            'js/lib/jquery.js',
-            'js/lib/underscore.js',
-            'js/lib/backbone.js',
-
-            'js/app.js',
-            'js/data/apple-data.js',
-
-            'templates/apple-item.tpl.js',
-            'templates/apple-home.tpl.js',
-            'templates/apple-spinner.tpl.js',
-            'templates/apple.tpl.js',
-
-            'js/apple-item-view.js',
-            'js/apple-home-view.js',
-            'js/apple-view.js',
-            'js/apples.js',
-            'js/apple-app.js',
-
-            'test/unit/**/*.js'
+            {pattern: '../js/lib/**/*.js', included: false},
+            {pattern: '../js/data/**/*.js', included: false},
+            {pattern: '../js/app.js', included: false},
+            {pattern: '../js/apple-app.js', included: false},
+            {pattern: '../js/apple-home-view.js', included: false},
+            {pattern: '../js/apple-item-view.js', included: false},
+            {pattern: '../js/apple-view.js', included: false},
+            {pattern: '../js/apples.js', included: false},
+            { pattern: '../test/**/*-spec.js', included: false },
+            'unit/test-main.js'
         ],
-
 
         // list of files to exclude
         exclude: [],
@@ -71,7 +59,7 @@ module.exports = function (config) {
 
         // start these browsers
         // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-        browsers: ['Chrome'],
+        browsers: ['PhantomJS'],
 
 
         // Continuous Integration mode

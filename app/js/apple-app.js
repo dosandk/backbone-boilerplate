@@ -1,6 +1,6 @@
-requirejs.config({
+/*requirejs.config({
     urlArgs: "bust=" + (new Date()).getTime()
-});
+});*/
 
 require(
     [
@@ -34,6 +34,7 @@ require(
         ];
 
         var app;
+
         var router = Backbone.Router.extend({ //check if need to be required
             routes: {
                 '': 'home',
